@@ -1,11 +1,8 @@
 from requests import get
 from bs4 import BeautifulSoup
+import bs4
 import csv
-from lxml import etree
-import html2csv
-import HTMLParser
-import sys, getopt, os.path, glob, HTMLParser, re
-
+import io
 final_result=[]
 
 url='https://in.finance.yahoo.com/quote/VLE.TO/key-statistics?p=VLE.TO'
@@ -20,37 +17,36 @@ resultstr=str(result)
 a=resultstr.replace('[','')
 finalresult=a.replace(']','')
 
+def detect_engine():
+    try:
+        import lxml
+    except ImportError:
+        engine = 'html.parser'
+    else:
+        engine = 'lxml'
+    return engine
 
+def convert( html_doc):
+    soup = bs4.BeautifulSoup(html_doc,'html.parser' )
+    output = []
+    for table_num, table in enumerate(soup.find_all('table')):
+        csv_string = io.StringIO()
+        csv_writer = csv.writer(csv_string)
+        for tr in table.find_all('tr'):
+            row = [''.join(cell.stripped_strings) for cell in tr.find_all(['td', 'th'])]
+            csv_writer.writerow(row)
+        table_attrs = dict(num=table_num)
+        output.append((csv_string.getvalue(), table_attrs))
+    return output
 
-# htmlfile = open(htmlfilename, 'rb')
-# csvfile = open( outputfilename, 'w+b')
-
-data = finalresult
-
-HTMLParser.HTMLParser.feed(data)
-
-csvdata=HTMLParser.HTMLParser.getCSV(True)
-print(csvdata)
-# while data:
-#     parser.feed( data )
-#     csvfile.write( parser.getCSV() )
-#     sys.stdout.write('%d CSV rows written.\r' % parser.rowCount)
-#     data = htmlfile.read(8192)
-# csvfile.write( parser.getCSV(True) )
-# csvfile.close()
-# htmlfile.close()
-
-def getCSV(self,purge=False):
-    ''' Get output CSV.
-        If purge is true, getCSV() will return all remaining data,
-        even if <td> or <tr> are not properly closed.
-        (You would typically call getCSV with purge=True when you do not have
-        any more HTML to feed and you suspect dirty HTML (unclosed tags). '''
-    if purge and self.inTR: self.end_tr()  # This will also end_td and append last CSV row to output CSV.
-    dataout = self.CSV[:]
-    self.CSV = ''
-    return dataout
-
-
-
+# print(len(convert(finalresult)))
+finalarray=[]
+outputarray = convert(finalresult)
+len(outputarray)
+for i in (outputarray):
+    for j in (1,len(i)-1):
+        # print(j)
+        finalarray.append((i[0]))
+        print(finalarray)
+    # print(i)
 
