@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import csv
 
 symbol_list=[
 'FBS.TO',
@@ -81,6 +82,7 @@ symbol_list=[
 total_stock_list=[]
 
 for symbol in symbol_list:
+    
 
     url='https://in.finance.yahoo.com/quote/'+symbol+'/key-statistics?p='+symbol
     response = requests.get(url)
@@ -96,6 +98,7 @@ for symbol in symbol_list:
 
 
     #stock_price = soup.find("span", attrs={"class": "price"}).getText().replace("\n", "").replace("\t", '').replace('\r', '')
+    
     try:
         market_cap=result['Market cap (intra-day)5']
         total_cash=result['Total cash(mrq)']
@@ -113,3 +116,8 @@ for symbol in symbol_list:
     except KeyError:
         continue
 print(total_stock_list)
+
+
+with open("temp.csv", "w", newline="") as f:
+   writer = csv.writer(f)
+   writer.writerows(total_stock_list)
