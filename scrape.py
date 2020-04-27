@@ -2,7 +2,7 @@ from requests import get
 from bs4 import BeautifulSoup
 import csv
 
-symbols = ['tao', 'grg', 'td']
+symbols = ['vle']
 final_result = []
 
 filename='output.csv'
