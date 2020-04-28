@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "airy-legacy-275607",
+  "private_key_id": "edee5613407dcc65a2ce0e9805aa2b199f4bee08",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDSMFEveNHvjoB2\nnxZ1qEHMxpYhEB8L0bCUFAUCBDFQy/I6r3WeXIDaXvRazD0o3grt/oORQLOZ5MII\n5RV1/E1INEKI60JNMpP1r+Z/9fc7AVlIV8PTjtu2IvW7AuUaN+gA3eiU154btOko\nuIM4GJhXQhVTg+tOArCewF0B/IoNYuzgdms0foq+MniKuNyfuMR2ZM88aeHxqktp\ndodO31RdSvjfWqAHPAQPaVo1wxEn5qjxbWJHmgP8/axNZ8FZLxL9LJDY3gcgAoMC\n6nqNAMTXXbmeSANX7KMxWhRyV/EXbKSdZEUNri+qBI8/zCUCIBXCJsq9XE/1g68d\ntD4o7WfbAgMBAAECggEALjeOmnQkIVtBtxObIirpsQfXmhSL5xLoE19ljIB0gZIe\nxLWxFK29bYbkjxSKvDI60AMfVfCWrVemLMOGmQdtzNsk6CtmzEe7ThIsCmYAw1o0\nEhquRhYLDL0aMFFeJAo3+vzQd+4DZ487l4ce31ZVJRa0TsVal7Ayuu2MZfPsPS3l\nxyljcsS7TSB0NqEIQ96WB5xUpnquT7aiRtwvcDMjUhjt2BnM5wy9cfHEa9YpiDNx\n417cp7HhgKXs5MMn4Js1haGDrzevHzmmpljYSrE5LN6A5hli+1rDG3+en+tFWmD3\nzZNS66gt6qFhd41Rm3yNT+xAS1xzOLmlN5Xi8UTotQKBgQD0PuBakt7DMIK/V9F8\nuwOmYUYxH/nKCYUSAuX9PK7nsyU198aYlPzxDmuKoMzENwxl248Q3X8A7gGsThxr\nR+0jGPsfDwFi57Krku+e/wF++velIkdMKYgQir7xAoWPf5fv0ykN6X8XwdfzVWbM\nB4XnTWLOPup6Qdlk7NSCSuKHzQKBgQDcTduM1NG00GgUqx91w31q7fx1yc7K4WMJ\nf3ZyRvDBRjmNaggauUkO41aTQC2Ruol72y/QTr8+hpiht0rmAtlIP2EcXLwifC1z\neYvekvQJ+6KQgfd59ZgpnttEaqCgQX88hXYfpc/mNpU5cAADoZtHD5N1NDN81swo\n0xChi8a2RwKBgCM7xsWKFlR19QaBNpkVqUshES0Y/cGlaerVPDQxwtFtyFpmqeFs\n7KghemX/GErd3g37hEHckeuiad9fTT40nALKIb+zPHH2FpIlmieHhcG5lmvd7AcS\nnqw0N6Mwx++RamuQPIXjPxBASFSz5yZbl3dsdGpoLQ8B3MhwWZ+KCe+pAoGAcx9A\ndpSTzWAGs55Ev15bwLACeG7v4DbtcP4poEgP8X/H/W0GNSjT07La//HOnlOTGqUM\nlFdCOuNNCVzmB9I/RzDPh2myanbnrWs7uyCh5EGZztgLwbCkRkOcI2Fw9K2lVrQL\naThVruChFDXB3CPsJ7MtBFc1/KumXkMFctW/DmsCgYEAz4sWRN5X0xxDObhID3bC\nwh8/Y7omH+ow8JkL2Burm9bQxJS5WspovtZDs3oneewC//yT7lPFFlegqw62XG2t\nZJfH1GurdGpPdROPZkb4QxVdYv1PQIiui0p0fI2eXihZSsV+VI5gOMHiE/u0XgUR\nk9F/sAa9k0uds2v6gSALSF4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "googlesheet@airy-legacy-275607.iam.gserviceaccount.com",
+  "client_id": "107502778734771575261",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/googlesheet%40airy-legacy-275607.iam.gserviceaccount.com"
+}
